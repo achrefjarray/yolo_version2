@@ -1,0 +1,7 @@
+# here you need to specify the files train, test and validation txt # files created in step 1.
+train: ../data/images/train #lien de dossier des image
+val: ../data/images/test
+# number of classes in your dataset
+nc: 1
+# class names
+names: ['Drone']
