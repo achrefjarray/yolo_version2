@@ -552,3 +552,7 @@ def increment_path(path, exist_ok=True, sep=''):
         i = [int(m.groups()[0]) for m in matches if m]  # indices
         n = max(i) + 1 if i else 2  # increment number
         return f"{path}{sep}{n}"  # update path
+for k, v in meta.items():
+    hyp[k] = max(hyp[k], v[1])  # lower limit
+    hyp[k] = min(hyp[k], v[2])  # upper limit
+    hyp[k] = round(hyp[k], 5)  # significant digits
