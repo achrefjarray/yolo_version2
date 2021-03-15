@@ -125,7 +125,7 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
     else:
         lf = one_cycle(1, hyp['lrf'], epochs)  # cosine 1->hyp['lrf']
     scheduler = lr_scheduler.LambdaLR(optimizer, lr_lambda=lf)
-    # plot_lr_scheduler(optimizer, scheduler, epochs)
+    plot_lr_scheduler(optimizer, scheduler, epochs)
 
     # Logging
     if rank in [-1, 0] and wandb and wandb.run is None:
