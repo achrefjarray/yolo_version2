@@ -10,6 +10,12 @@ class SiLU(nn.Module):  # export-friendly version of nn.SiLU()
     @staticmethod
     def forward(x):
         return x * torch.sigmoid(x)
+###
+class GELU(nn.Module):  # export-friendly version of nn.GELU()
+    @staticmethod
+    def forward(x):
+        return x *0.5*(1+ torch.erf(x/math.sqrt(2)))
+###
 
 
 class Hardswish(nn.Module):  # export-friendly version of nn.Hardswish()
