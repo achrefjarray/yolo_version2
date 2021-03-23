@@ -7,6 +7,7 @@ import numpy as np
 import requests
 import torch
 import torch.nn as nn
+
 from PIL import Image, ImageDraw
 
 from utils.datasets import letterbox
@@ -25,7 +26,7 @@ def DWConv(c1, c2, k=1, s=1, act=True):
     # Depthwise convolution
     return Conv(c1, c2, k, s, g=math.gcd(c1, c2), act=act)
 
-
+import torch.nn.functional as F
 class Conv(nn.Module):
     # Standard convolution
     def __init__(self, c1, c2, k=1, s=1, p=None, g=1, act=True):  # ch_in, ch_out, kernel, stride, padding, groups
