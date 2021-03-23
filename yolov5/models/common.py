@@ -34,7 +34,7 @@ class Conv(nn.Module):
         self.bn = nn.BatchNorm2d(c2)
         #self.act = nn.SiLU() if act is True else (act if isinstance(act, nn.Module) else nn.Identity())
         #self.act =nn.GELU()
-        self.act =nn.FReLU(c2)
+        self.act =nn.Mish()
     def forward(self, x):
         return self.act(self.bn(self.conv(x)))
 
