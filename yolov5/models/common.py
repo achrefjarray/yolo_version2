@@ -36,7 +36,7 @@ class Conv(nn.Module):
         #self.act = nn.SiLU() if act is True else (act if isinstance(act, nn.Module) else nn.Identity())
         #self.act =nn.GELU()
         #self.act =nn.Hardswish()
-        self.act =FReLU()
+        self.act =nn.MemoryEfficientMish()
     def forward(self, x):
         return self.act(self.bn(self.conv(x)))
 
