@@ -5,12 +5,12 @@ weight_decay: 0.00052
 warmup_epochs: 2
 warmup_momentum: 0.852
 warmup_bias_lr: 0.0958
-box: 0.0568
+box: 0.08
 cls: 0.293
 cls_pw: 1.01
-obj: 0.3
+obj: 0.8
 obj_pw: 1.22
-iou_t: 0.2
+iou_t: 0.5
 anchor_t: 3.32
 anchors: 6
 fl_gamma: 0
