@@ -1,8 +1,8 @@
-lr0: 0.011
+lr0: 0.0011
 lrf: 0.22
 momentum: 0.852
 weight_decay: 0.00052
-warmup_epochs: 1.83
+warmup_epochs: 5
 warmup_momentum: 0.852
 warmup_bias_lr: 0.0958
 box: 0.0568
@@ -12,13 +12,13 @@ obj: 0.994
 obj_pw: 1.22
 iou_t: 0.2
 anchor_t: 3.32
-anchors: 2.0
+anchors: 6
 fl_gamma: 1.0
 hsv_h: 0.015
 hsv_s: 0.635
 hsv_v: 0.291
 degrees: 2.08
-translate: 0.111
+translate: 0.8
 scale: 0.48
 shear: 0.973
 perspective: 0.0005
